@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'Cookie Monster';
+  src: url('Cookiemonster.ttf') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    background-color: hsl(330, 100%, 77%);
+  }
+  audio {
+    border: 2px solid hsl(330, 100%, 77%);
+    border-radius: 20px;
+  }
+  .card {
+    width: 640px;
+    height: 400px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transition: 1s;
+   
+  }
+  .card:hover {
+    transform: rotate(-5deg);
+  }
+  .card:hover .outside {
+    transform: rotateY(-130deg);
+  }
+  .outside,
+  .inside {
+    height: 150%;
+    width: 70%;
+    position: absolute;
+    left: 50.1%;
+    border-radius: 0.7rem;
+  }
+  .inside {
+    background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
+    line-height: 2;
+    text-align: center;
+    padding: 1rem;;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    left: 50%;
+  }
+  .outside {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 2s;
+    cursor: pointer;
+  }
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    border-radius: 0.7rem;
+  }
+  
+  .front {
+    background-color: #ffffff;
+  }
+
+  .greeting {
+    font-family: 'Cookie Monster', cursive;
+    font-size: 2.2rem;
+  }
+  
+  .cake {
+    display: block;
+    margin: auto;
+    width: 50%;
+  }
+
+  .back {
+    transform: rotateY(180deg);
+    background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+  }
+  
+  .outside p {
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: center;
+    letter-spacing: 6px;
+    color: #000046;
+  }
+  .inside h1 {
+    font-size: 120px;
+    line-height: 120px;
+  }
